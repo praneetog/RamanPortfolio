@@ -79,33 +79,41 @@ export function Arsenal() {
   return (
     <section className="py-24 bg-slate-950 border-t border-slate-900 relative overflow-hidden">
       {/* Background Image with Black Overlay */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2000')" }}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2000')",
+        }}
       />
       <div className="absolute inset-0 z-0 bg-black/80 backdrop-blur-sm" />
-      
+
       <style>{`
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       `}</style>
       <div className="max-w-[100vw] sm:max-w-7xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12 px-4 sm:px-6 lg:px-8"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-8 uppercase">The Content Arsenal</h2>
+          <h2
+            id="arsenal"
+            className="text-4xl md:text-5xl font-black text-white mb-8 uppercase"
+          >
+            The Content Arsenal
+          </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map(cat => (
+            {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-8 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 ${
-                  activeCategory === cat 
-                    ? "bg-brand-cyan text-slate-950 shadow-[0_0_15px_rgba(0,240,255,0.4)]" 
+                  activeCategory === cat
+                    ? "bg-brand-cyan text-slate-950 shadow-[0_0_15px_rgba(0,240,255,0.4)]"
                     : "bg-slate-900 text-slate-400 border border-slate-800 hover:border-brand-orange hover:text-white"
                 }`}
               >
@@ -117,21 +125,21 @@ export function Arsenal() {
 
         <div className="relative group max-w-7xl mx-auto">
           {canScrollLeft && (
-            <div 
+            <div
               className="hidden md:flex absolute left-0 top-0 bottom-12 w-16 sm:w-24 md:w-32 z-20 bg-gradient-to-r from-slate-950/60 via-slate-950/20 to-transparent items-center justify-start px-1 sm:px-2 md:px-4 cursor-pointer opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
               onClick={() => scroll("left")}
             >
               <ChevronLeft className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.5)]" />
             </div>
           )}
-          
-          <div 
-            ref={scrollContainerRef} 
+
+          <div
+            ref={scrollContainerRef}
             className="flex overflow-x-auto overflow-y-hidden gap-4 sm:gap-6 snap-x snap-mandatory hide-scrollbar px-4 sm:px-6 lg:px-8 pb-4 md:pb-12"
             onScroll={checkScroll}
           >
             <AnimatePresence mode="popLayout">
-              {filteredItems.map(item => (
+              {filteredItems.map((item) => (
                 <motion.div
                   key={item.id}
                   layout
@@ -148,11 +156,11 @@ export function Arsenal() {
           </div>
 
           {canScrollRight && (
-            <div 
+            <div
               className="hidden md:flex absolute right-0 top-0 bottom-12 w-16 sm:w-24 md:w-32 z-20 bg-gradient-to-l from-slate-950/60 via-slate-950/20 to-transparent items-center justify-end px-1 sm:px-2 md:px-4 cursor-pointer opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
               onClick={() => scroll("right")}
             >
-               <ChevronRight className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.5)]" />
+              <ChevronRight className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-[0_0_8px_rgba(0,0,0,0.5)]" />
             </div>
           )}
         </div>
@@ -161,10 +169,12 @@ export function Arsenal() {
         {filteredItems.length > 1 && (
           <div className="flex justify-center items-center gap-2 mt-2 md:hidden">
             {filteredItems.map((_, idx) => (
-              <div 
+              <div
                 key={idx}
                 className={`transition-all duration-300 rounded-full ${
-                  activeIndex === idx ? 'w-3 h-3 bg-brand-cyan shadow-[0_0_8px_rgba(0,240,255,0.6)]' : 'w-2 h-2 bg-slate-700'
+                  activeIndex === idx
+                    ? "w-3 h-3 bg-brand-cyan shadow-[0_0_8px_rgba(0,240,255,0.6)]"
+                    : "w-2 h-2 bg-slate-700"
                 }`}
               />
             ))}

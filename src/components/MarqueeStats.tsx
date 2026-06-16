@@ -53,6 +53,7 @@ export function MarqueeStats() {
 
   return (
     <section
+    id="stats"
       className={`py-24 bg-slate-950 text-white relative overflow-hidden ${selectedId ? "z-[100]" : "z-10"}`}
     >
       <div

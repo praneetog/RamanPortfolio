@@ -36,7 +36,7 @@ export function Articles() {
   };
 
   return (
-    <section className="py-24 bg-slate-950 border-t border-slate-900 overflow-hidden relative">
+    <section id="articles" className="py-24 bg-slate-950 border-t border-slate-900 overflow-hidden relative">
       <div className="max-w-[100vw] sm:max-w-7xl mx-auto px-0 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

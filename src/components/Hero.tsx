@@ -175,17 +175,6 @@ export function Hero() {
             "Itni shiddat se maine tumhe paane ki koshish ki hai, ki har zarre
             ne mujhe tumse milane ki saazish ki hai."
           </h2>
-
-          <button
-            onClick={() =>
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-            className="px-8 py-4 md:px-10 md:py-5 rounded-full font-bold text-lg md:text-xl transition-colors shadow-lg cursor-pointer bg-orange-500 hover:bg-orange-400 text-white"
-          >
-            Hire Me
-          </button>
         </div>
       </motion.div>
     </div>

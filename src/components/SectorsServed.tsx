@@ -25,7 +25,7 @@ export function SectorsServed() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section
+    <section id="sectors"
       className="py-24 bg-slate-900 border-t border-slate-800 relative overflow-hidden"
       ref={ref}
     >

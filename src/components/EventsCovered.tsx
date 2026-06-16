@@ -28,7 +28,7 @@ export function EventsCovered() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="py-24 bg-slate-950 border-t border-slate-900 relative overflow-hidden" ref={ref}>
+    <section id="events" className="py-24 bg-slate-950 border-t border-slate-900 relative overflow-hidden" ref={ref}>
       {/* Background Image with Black Overlay */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center" 
