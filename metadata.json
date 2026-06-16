@@ -1,0 +1,6 @@
+{
+  "name": "Raman Portfolio",
+  "description": "A single-page portfolio website for Raman, featuring a hero section, marquee stats, competencies grid, social media embeds, unfiltered content, and an articles carousel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
