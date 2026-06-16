@@ -10,6 +10,8 @@ const directionReels = [
   "https://www.instagram.com/reels/CrfrRE0uDYi/",
   "https://www.instagram.com/reels/CqQTUG6j97N/",
   "https://www.instagram.com/reels/CpxaBQ4jYTo/",
+  "https://www.instagram.com/reel/DYzU2FjN1F7/?igsh=MWgydzlxcWFsM281Yw==",
+  "https://www.instagram.com/reel/DZfTEP8qiHH/?igsh=anQ2dG4ydmtteXZj",
 ];
 
 function ReelEmbed({ url }: { url: string }) {
