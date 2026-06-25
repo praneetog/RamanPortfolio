@@ -25,7 +25,7 @@ export const brands = [
     url: "https://www.instagram.com/sukaaya_physio_care?igsh=c212djQ5bHIyaXB4",
   },
   {
-    name: "Sportskeeda",
+    name: "Sportskeeda Cricket",
     url: "https://www.instagram.com/sportskeedacricket?igsh=MXVieGUzdjAydmdreg==",
   },
   {
@@ -73,7 +73,7 @@ export const brands = [
 
 export const growthStats = [
   {
-    company: "Sportskeeda",
+    company: "Sportskeeda Cricket",
     start: 650,
     end: 920,
     startStr: "650k",
@@ -127,6 +127,10 @@ export const competencies = [
   "Quality Checking",
   "Client Communication",
   "Project Management",
+  "Brand Positioning",
+  "Competitor Analysis",
+  "Content Audit",
+  "Performance Analysis",
 ];
 
 export const contentArsenal = [
